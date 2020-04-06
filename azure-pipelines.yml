@@ -85,4 +85,4 @@ stages:
             inputs:
               azureSubscription: 'arm'
               appName: '$(WebAppName)'
-              package: '$(Pipeline.Workspace)/drop/$(buildConfiguration)/*.zip'
+              package: '$(Pipeline.Workspace)/drop/release/*.zip'
