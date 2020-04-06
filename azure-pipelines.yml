@@ -64,8 +64,7 @@ stages:
     - publish: '$(Build.ArtifactStagingDirectory)'
       artifact: drop
 
-    - task: PublishBuildArtifacts@1
-    
+
 - stage: 'Deploy'
   displayName: 'Deploy the web application'
   dependsOn: Build
@@ -87,4 +86,4 @@ stages:
             inputs:
               azureSubscription: 'arm'
               appName: '$(WebAppName)'
-              package: '$(Pipeline.Workspace)/drop/release/*.zip'
+              package: '$(Pipeline.Workspace)/drop/*.zip'
